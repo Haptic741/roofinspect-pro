@@ -199,13 +199,39 @@
   </p>
 </section>
 
-<section class="cta">
-  <h2>Investor Access</h2>
-  <p>
-    Interested in learning more or reviewing the full deck?
-  </p>
-  <a href="/contact">Request Full Investor Deck</a>
+<section class="cta" id="investor-contact">
+  <h2>Request Investor Access</h2>
+  <p>Get the full pitch deck, metrics and data room access.</p>
+
+  <form name="investor-contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="investor-contact">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+
+    <input type="text" name="organization" placeholder="Organization">
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <select name="investor_type">
+      <option value="VC">VC Fund</option>
+      <option value="Angel">Angel Investor</option>
+      <option value="Corporate">Corporate / Strategic</option>
+      <option value="Grant">Grant / Accelerator</option>
+    </select>
+
+    <select name="ticket_size">
+      <option value="<100k">&lt; €100k</option>
+      <option value="100k-500k">€100k – €500k</option>
+      <option value="500k-1M">€500k – €1M</option>
+      <option value=">1M">&gt; €1M</option>
+    </select>
+
+    <textarea name="message" placeholder="Short note (optional)"></textarea>
+
+    <button type="submit">Request Access</button>
+  </form>
 </section>
+
 
 <footer>
   © 2026 RoofInspect Pro — Confidential & Proprietary
